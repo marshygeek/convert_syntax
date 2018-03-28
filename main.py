@@ -21,7 +21,7 @@ def check_path(path):
     for filename in os.listdir(path):
         path_to_file = os.path.join(path, filename)
         print(path_to_file)
-        if os.path.isfile(path_to_file):
+        if os.path.isfile(path_to_file) and path_to_file.endswith(".py"):
             process_file(path_to_file)
         elif os.path.isdir(path_to_file):
             check_path(path_to_file)
